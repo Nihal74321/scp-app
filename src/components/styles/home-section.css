@@ -1,0 +1,20 @@
+.wrapper {
+    display: flex;
+    gap: 2.25rem;
+}
+.header {
+    font-size: 3rem;
+    margin: 0;
+    padding-block: 0.8rem 1.8rem;
+}
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 2.25rem;
+}
+.card-container > * {
+    border-radius: 1rem;
+    width: 21rem;
+    height: 28rem;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.2);
+}

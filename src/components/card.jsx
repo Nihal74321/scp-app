@@ -1,8 +1,8 @@
 import "./styles/main-file.css"
-export default function Card() {
+export default function Card(element) {
     return(
         <div className="card-container">
-            <p className="test">This is some text</p>
+            <img src={element.img} alt="" />
         </div>
     )
 }
