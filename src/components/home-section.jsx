@@ -1,23 +1,25 @@
 import Card from "./card"
-import Doctor from "../assets/the-doctor.png"
+import Page from "./inf-container"
 import ExploreMenu from "./explore-section"
 import "./styles/extras.css"
 import "./styles/home-section.css"
+import { BrowserRouter as Router, Route, Routes, useParams } from "react-router-dom"
+
+
+function ParseDetail() {
+    const {id} = useParams();
+    return <Page id={id}/>
+}
 export default function HomeComponent() {
     return (
-        <div className="wrapper">
-            <ExploreMenu className="explore-section" />
-            <div className="content-wrapper">
-                <h1 className="header">Explore now</h1>
-                <div className="card-container">
-                    <Card img = {Doctor}></Card>
-                    <Card img = {Doctor}></Card>
-                    <Card img = {Doctor}></Card>
-                    <Card img = {Doctor}></Card>
-                    <Card img = {Doctor}></Card>
-                    <Card img = {Doctor}></Card>
-                </div>
+        <Router>
+            <div className="wrapper">
+                <ExploreMenu className="explore-section" />
+                <Routes>
+                    <Route className="Home-page" path="/" element={<Card/>}/>
+                    <Route path="/scps/:id"  element={<ParseDetail />}/>
+                </Routes>
             </div>
-        </div>
+        </Router>
     )
 }
