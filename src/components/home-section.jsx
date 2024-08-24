@@ -12,6 +12,11 @@ function ParseDetail() {
 }
 export default function HomeComponent() {
     return (
+        <>
+        <div className="circle-container">
+            <div className="circle"></div>
+        </div>
+        <div className="overlay-container"></div>
         <Router>
             <div className="wrapper">
                 <ExploreMenu className="explore-section" />
@@ -21,5 +26,6 @@ export default function HomeComponent() {
                 </Routes>
             </div>
         </Router>
+        </>
     )
 }
