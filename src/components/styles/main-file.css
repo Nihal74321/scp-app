@@ -2,7 +2,14 @@
     --l-blue: #59bee6;
 }
 .main-wrapper {
-    padding-left: 3rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.title-container {
+    padding-top: 4rem;
+    width: 95%;
 }
 .header {
     font-size: 3rem;
@@ -10,31 +17,36 @@
     padding-block: 0.8rem 1.8rem;
 }
 .card-container {
-    width: 60%;
+    width: 90%;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    justify-content: center;
+    grid-template-columns: repeat(5,1fr);
 }
-.entry-container {
+.link-container {
     position: relative;
-    background-color: rgba(67,67,67,0.5);
-    backdrop-filter: blur(20px);
-    width: 17rem;
+    background-color: #f1f4e3;
+    width: 15rem;
     display: flex;
     justify-content: center;
-    padding: 0;
-    margin: 0;
-    padding: 0.8rem 0 2.5rem 0;
-    margin-bottom: 2.25rem;
-    border-radius: 1rem;
-}
-.entry-container > .link-container {
-    padding: 0;
     margin: 0;
     text-decoration: none;
-    color: white;
-    font-weight: 500;
+    color: rgb(16, 19, 49);
+    font-weight: 800;
+    transition: background-color 150ms ease-in-out;
+    overflow: hidden;
+}
+.link-container:hover {
+    background-color: #b3b4ac;
+}
+.text-container {
+    background-color: #f1f4e3;
+    padding-block: 0.5rem 0.8rem;
+    width: 100%;
+    height: auto;
 }
 .text-container > p {
+    display: flex;
+    justify-content: center;
     padding: 0;
     margin: 0;
     font-size: 1.2rem;
@@ -43,16 +55,35 @@
     color: #676767;
     font-weight: 400;
     font-size: 1.1rem !important;
-    padding-top: 0.4rem !important;
 }
 .short-desc {
     font-size: 1rem !important;
     padding-top: 0.6rem !important;
 }
 .card-container img {
-    border-radius: 0.5rem;
-    margin-bottom: 1rem;
-    width: 15rem;
-    aspect-ratio: 1/1;
+    width: 100%;
     cursor: pointer;
+}
+@media only screen and (max-width: 1379px) {
+    .card-container {
+        width: 60%;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.25rem;
+    }
+}
+@media only screen and (max-width: 1064px) {
+    .card-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media only screen and (max-width: 829px) {
+    .card-container {
+        width: 50%;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media only screen and (max-width: 544px) {
+    .card-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
 }

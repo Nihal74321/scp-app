@@ -1,5 +1,40 @@
 .container {
-    min-width: 21rem;
-    background-color: #474747;
-    opacity: 0.3;
+    min-width: 100%;
+    background-color: rgba(47,47,47, 0.5);
+    backdrop-filter: blur(20px);
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+}
+.container > nav {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+}
+p {
+    padding-inline: 0;
+    padding-block: 0.8rem 1.2rem;
+    margin: 0;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+.link {
+    text-decoration: none;
+    color: white !important;
+}
+@media only screen and (max-width: 1089px) {
+    .container > nav {
+        width: 40%;
+    }
+}
+@media only screen and (max-width: 789px) {
+    .container > nav {
+        width: 60%;
+    }
+}
+@media only screen and (max-width: 589px) {
+    .container > nav {
+        width: 80%;
+    }
 }

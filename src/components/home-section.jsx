@@ -7,8 +7,8 @@ import { BrowserRouter as Router, Route, Routes, useParams } from "react-router-
 
 
 function ParseDetail() {
-    const {id} = useParams();
-    return <Page id={id}/>
+    const {name} = useParams();
+    return <Page name={name}/>
 }
 export default function HomeComponent() {
     return (
@@ -17,7 +17,7 @@ export default function HomeComponent() {
                 <ExploreMenu className="explore-section" />
                 <Routes>
                     <Route className="Home-page" path="/" element={<Card/>}/>
-                    <Route path="/scps/:id"  element={<ParseDetail />}/>
+                    <Route path="/scps/:name"  element={<ParseDetail />}/>
                 </Routes>
             </div>
         </Router>
