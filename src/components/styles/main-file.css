@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
 *:root{ 
     --l-blue: #59bee6;
 }
@@ -15,7 +15,7 @@
     width: 70%;
 }
 .header {
-    font-family: "DM Serif Text", serif;
+    font-family: "Noto Serif", serif;
     font-size: 2.441rem;
     margin: 0;
     padding-block: 0.8rem 1.4rem;
@@ -55,9 +55,10 @@
     width: 100%;
     cursor: pointer;
 }
-@media only screen and (max-width: 1379px) {
+@media only screen and (max-width: 1549px) {
     .title-container {
         margin-top: 0rem;
+        width: 65%;
     }
     .card-container {
         width: 60%;

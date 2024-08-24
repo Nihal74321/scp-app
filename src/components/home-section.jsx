@@ -18,8 +18,8 @@ export default function HomeComponent() {
         </div>
         <div className="overlay-container"></div>
         <Router>
+        <ExploreMenu className="explore-section" />
             <div className="wrapper">
-                <ExploreMenu className="explore-section" />
                 <Routes>
                     <Route className="Home-page" path="/" element={<Card/>}/>
                     <Route path="/scps/:name"  element={<ParseDetail />}/>
