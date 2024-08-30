@@ -1,6 +1,7 @@
 import Card from "./card"
 import Page from "./inf-container"
 import ExploreMenu from "./explore-section"
+import ScrollRestoration from "./ScrollRestoration"
 import "./styles/extras.css"
 import "./styles/home-section.css"
 import { BrowserRouter as Router, Route, Routes, useParams } from "react-router-dom"
@@ -18,6 +19,7 @@ export default function HomeComponent() {
         </div>
         <div className="overlay-container"></div>
         <Router>
+        <ScrollRestoration />
         <ExploreMenu className="explore-section" />
             <div className="wrapper">
                 <Routes>
